@@ -5,7 +5,6 @@
       <template v-slot:value><form-validation /></template>
     </my-slot> -->
     <facebook-sign-up/>
-    <test/>
   </div>
 </template>
 
