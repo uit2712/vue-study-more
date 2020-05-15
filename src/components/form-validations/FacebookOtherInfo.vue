@@ -1,8 +1,8 @@
 <template>
     <div class="fb-other-info">
-        <div class="form-group">
-            <label>Birthday</label>
-            <input type="date" v-model="model.birthday" />
+        <div class="form-group" :class="{ 'form-group--error': $v.model.birthday.$error }">
+            <label class="form__label">Birthday</label>
+            <input class="form__input" type="date" v-model="model.birthday" />
             <div class="error" v-if="!$v.model.birthday.required">Birthday required</div>
         </div>
     </div>
