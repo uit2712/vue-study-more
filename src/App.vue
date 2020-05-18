@@ -1,14 +1,16 @@
 <template>
   <div id="app">
-    <facebook-sign-up/>
+    <!-- <facebook-sign-up/> -->
+    <demo-select2/>
   </div>
 </template>
 
 <script>
 import Vue from "vue";
 import Vuelidate from 'vuelidate';
-import FacebookSignUp from './components/form-validations/FacebookSignUp.vue';
+// import FacebookSignUp from './components/form-validations/FacebookSignUp.vue';
 import { joinRules } from './filters';
+import DemoSelect2 from './components/select2/DemoSelect2.vue';
 
 Vue.use(Vuelidate);
 Vue.filter('joinRules', joinRules);
@@ -16,7 +18,8 @@ Vue.filter('joinRules', joinRules);
 export default {
   name: 'App',
   components: {
-    FacebookSignUp,
+    // FacebookSignUp,
+    DemoSelect2,
   }
 }
 </script>
