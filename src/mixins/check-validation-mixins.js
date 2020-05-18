@@ -1,14 +1,13 @@
 const mixins = {
     watch: {
-        "$v.$invalid": function() {
+        "$data.model": function() {
             this.checkValidation();
         },
     },
     methods: {
         checkValidation: function() {
-            const valid = !this.$v.$invalid;
             const model = this.model;
-            this.$emit("validation", { valid, model });
+            this.$emit("validation", { model });
         },
     },
     created() {

@@ -1,29 +1,21 @@
 <template>
   <div id="app">
-    <!-- <my-slot>
-      <template v-slot:title><form-input-binding /></template>
-      <template v-slot:value><form-validation /></template>
-    </my-slot> -->
     <facebook-sign-up/>
   </div>
 </template>
 
 <script>
 import Vue from "vue";
-// import FormValidation from './components/form-validations/FormValidation.vue'
-// import FormInputBinding from './components/FormInputBinding.vue'
-// import MySlot from './components/MySlot.vue'
 import Vuelidate from 'vuelidate';
 import FacebookSignUp from './components/form-validations/FacebookSignUp.vue';
+import { joinRules } from './filters';
 
 Vue.use(Vuelidate);
+Vue.filter('joinRules', joinRules);
 
 export default {
   name: 'App',
   components: {
-    // FormInputBinding,
-    // FormValidation,
-    // MySlot,
     FacebookSignUp,
   }
 }

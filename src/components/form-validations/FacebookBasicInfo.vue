@@ -1,44 +1,45 @@
 <template>
     <div class="fb-basic-info">
         <h2>Basic info</h2>
-        <div class="form-group">
+        <validation-provider class="form-group" :rules="[REQUIRED_RULE] | joinRules" v-slot="{ errors }">
             <label>First Name</label>
-            <input type="text" v-model="model.firstName" />
-            <div class="error" v-if="!$v.model.firstName.required">First Name required</div>
-        </div>
-        <div class="form-group">
+            <input type="text" v-model="model.firstName" name="First name" />
+            <div class="error">{{ errors[0] }}</div>
+        </validation-provider>
+        <validation-provider class="form-group" rules="required" v-slot="{ errors }">
             <label>Last Name</label>
-            <input type="text" v-model="model.lastName" />
-            <div class="error" v-if="!$v.model.lastName.required">Last Name required</div>
-        </div>
-        <div class="form-group">
+            <input type="text" v-model="model.lastName" name="Last name" />
+            <div class="error">{{ errors[0] }}</div>
+        </validation-provider>
+        <validation-provider class="form-group" :rules="[REQUIRED_RULE, EMAIL_RULE] | joinRules" v-slot="{ errors }">
             <label>Email</label>
-            <input type="text" v-model="model.email" />
-            <div class="error" v-if="!$v.model.email.required">Email required</div>
-            <div class="error" v-if="!$v.model.email.email">Email invalid</div>
-        </div>
-        <div class="form-group">
+            <input type="text" v-model="model.email" name="Email" />
+            <div class="error">{{ errors[0] }}</div>
+        </validation-provider>
+        <validation-provider class="form-group" :rules="[REQUIRED_RULE, MIN_LENGTH_RULE(6)] | joinRules" v-slot="{ errors }">
             <label>Password</label>
-            <input type="text" v-model="model.password" />
-            <div class="error" v-if="!$v.model.password.required">Password required</div>
-            <div class="error" v-if="!$v.model.password.minLength">Password must have at least {{ $v.model.password.$params.minLength.min }} characters</div>
-            <div class="error" v-if="!$v.model.password.alphaNum">Password must only contains alphabet and numeric</div>
-        </div>
-        <div class="form-group">
+            <input type="text" v-model="model.password" name="Password" />
+            <div class="error">{{ errors[0] }}</div>
+        </validation-provider>
+        <validation-provider class="form-group" :rules="[REQUIRED_RULE, SAME_PASSWORD_RULE(model.password) ] | joinRules" v-slot="{ errors }">
             <label>Confirm Password</label>
-            <input type="text" v-model="model.confirmPassword" />
-            <div class="error" v-if="!$v.model.confirmPassword.sameAs">Password not match</div>
-        </div>
+            <input type="text" v-model="model.confirmPassword" name="Confirm password" />
+            <div class="error">{{ errors[0] }}</div>
+        </validation-provider>
     </div>
 </template>
 
 <script lang="ts">
     import Vue from 'vue'
-    import { required, email, minLength, alphaNum, sameAs } from 'vuelidate/lib/validators'
+    import { ValidationProvider } from 'vee-validate';
     import CheckValidationMixins from '../../mixins/check-validation-mixins';
+    import ruleNames from '../../validations/vee-validate';
 
     export default Vue.extend({
         mixins: [CheckValidationMixins],
+        components: {
+            ValidationProvider,
+        },
         data() {
             return {
                 model: {
@@ -47,30 +48,11 @@
                     email: null,
                     password: null,
                     confirmPassword: null,
-                }
+                },
             }
         },
-        validations: {
-            model: {
-                firstName: {
-                    required,
-                },
-                lastName: {
-                    required,
-                },
-                email: {
-                    required,
-                    email,
-                },
-                password: {
-                    required,
-                    minLength: minLength(6),
-                    alphaNum,
-                },
-                confirmPassword: {
-                    sameAs: sameAs('password')
-                }
-            }
+        computed: {
+            ...ruleNames,
         }
     })
 </script>
