@@ -1,9 +1,11 @@
 <template>
     <div class="fb-sign-up">
         <h1>FACEBOOK SIGN UP</h1>
-        <facebook-basic-info v-on:validation="getValidationBasicInfo"/>
-        <facebook-other-info v-on:validation="getValidationOtherInfo"/>
-        <button :disabled="valid === false">Submit</button>
+        <validation-observer v-slot="{ invalid }">
+            <facebook-basic-info v-on:validation="getValidationBasicInfo"/>
+            <facebook-other-info v-on:validation="getValidationOtherInfo"/>
+            <button :disabled="invalid === true">Submit</button>
+        </validation-observer>
     </div>
 </template>
 
@@ -12,11 +14,13 @@
     import FacebookBasicInfo from './FacebookBasicInfo.vue'
     import FacebookOtherInfo from './FacebookOtherInfo.vue'
     import { required } from 'vuelidate/lib/validators'
+    import { ValidationObserver } from 'vee-validate';
 
     export default Vue.extend({
         components: {
             FacebookBasicInfo,
             FacebookOtherInfo,
+            ValidationObserver,
         },
         data() {
             return {
@@ -24,7 +28,6 @@
                     fbInfo: null,
                     otherInfo: null,
                 },
-                valid: false,
             }
         },
         validations: {
@@ -38,25 +41,13 @@
             }
         },
         methods: {
-            getValidationBasicInfo: function({ model, valid }) {
-                if (valid)
-                    this.model.fbInfo = model;
-                else this.model.fbInfo = null;
+            getValidationBasicInfo: function({ model }) {
+                this.model.fbInfo = model;
             },
-            getValidationOtherInfo: function({ model, valid }) {
-                if (valid)
-                    this.model.otherInfo = model;
-                else this.model.otherInfo = null;
+            getValidationOtherInfo: function({ model }) {
+                this.model.otherInfo = model;
             }
         },
-        watch: {
-            '$v.$invalid': function() {
-                this.valid = !this.$v.$invalid;
-            }
-        },
-        created() {
-            this.valid = !this.$v.$invalid;
-        }
     })
 </script>
 
