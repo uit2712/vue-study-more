@@ -2,6 +2,7 @@ import { extend, configure } from 'vee-validate';
 import { required, email, is } from 'vee-validate/dist/rules';
 
 const REQUIRED_RULE = 'required';
+const REQUIRED_SELECT2_RULE = 'requiredSelect2';
 const MIN_LENGTH_RULE = 'minLength';
 const EMAIL_RULE = 'email';
 const SAME_PASSWORD_RULE = 'samePassword';
@@ -11,6 +12,7 @@ export default {
     MIN_LENGTH_RULE: () => (value) => `${MIN_LENGTH_RULE}:${value}`,
     EMAIL_RULE: () => EMAIL_RULE,
     SAME_PASSWORD_RULE: () => (value) => `${SAME_PASSWORD_RULE}:${value}`,
+    REQUIRED_SELECT2_RULE: () => REQUIRED_SELECT2_RULE,
 }
 
 configure({
@@ -48,4 +50,13 @@ extend(EMAIL_RULE, {
 extend(SAME_PASSWORD_RULE, {
     ...is,
     message: 'Password mismatch'
+})
+
+extend(REQUIRED_SELECT2_RULE, {
+    validate(value) {
+        return Number(value) !== 0;
+    },
+    message: (fieldName) => {
+        return `${fieldName} required`
+    }
 })
