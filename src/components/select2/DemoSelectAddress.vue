@@ -150,7 +150,7 @@
                 this.wards.options = [];
             },
             onSubmit() {
-                
+                alert('Submit success');
             }
         },
         computed: {
