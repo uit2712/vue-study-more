@@ -1,7 +1,5 @@
 const path = require("path");
 
-const vueSrc = "./src";
-
 module.exports = {
   runtimeCompiler: true,
   css: {
@@ -10,7 +8,7 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        "@": path.join(__dirname, vueSrc)
+        "@": path.join(__dirname, "./src")
       },
       extensions: ['.js', '.vue', '.json']
     }
