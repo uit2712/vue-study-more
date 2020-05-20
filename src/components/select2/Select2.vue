@@ -82,6 +82,7 @@
         },
         destroyed: function() {
             $(this.$el)
+                .find('select')
                 .off()
                 .select2("destroy");
         },
