@@ -56,7 +56,7 @@
 
                 this.deselectAll();
                 this.setSearchInputPlaceholder();
-            },
+            }
         },
         methods: {
             setSearchInputPlaceholder() {

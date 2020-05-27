@@ -6,6 +6,7 @@ const REQUIRED_SELECT2_RULE = 'requiredSelect2';
 const MIN_LENGTH_RULE = 'minLength';
 const EMAIL_RULE = 'email';
 const SAME_PASSWORD_RULE = 'samePassword';
+const REQUIRED_IF_SELECT2_RULE = 'requiredIfSelect2';
 
 export default {
     REQUIRED_RULE: () => REQUIRED_RULE,
@@ -13,6 +14,7 @@ export default {
     EMAIL_RULE: () => EMAIL_RULE,
     SAME_PASSWORD_RULE: () => (value) => `${SAME_PASSWORD_RULE}:${value}`,
     REQUIRED_SELECT2_RULE: () => REQUIRED_SELECT2_RULE,
+    REQUIRED_IF_SELECT2_RULE: () => (value) => `${REQUIRED_IF_SELECT2_RULE}:${value}`,
 }
 
 configure({
@@ -56,6 +58,16 @@ extend(REQUIRED_SELECT2_RULE, {
     validate(value) {
         return Number(value) !== 0;
     },
+    message: (fieldName) => {
+        return `${fieldName} required`
+    }
+})
+
+extend(REQUIRED_IF_SELECT2_RULE, {
+    validate(value, args) {
+        return args.valid === false || (args.valid === true && value !== null && value !== undefined);
+    },
+    params: ['valid'],
     message: (fieldName) => {
         return `${fieldName} required`
     }
