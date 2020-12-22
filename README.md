@@ -1,5 +1,10 @@
 # study-more
 
+## Install vue-cli
+```
+npm install -g @vue/cli
+```
+
 ## Project setup
 ```
 npm install
