@@ -47,7 +47,15 @@ npm update -g @vue/cli
     |   |   |   ├── HeightTransition.vue            # Hiệu ứng fade-in và fade-out (từ từ hiện ra và từ từ biến mất) dùng cho các dropdown
     |   |   |   ├── LatchOrderErrors.vue            # Hiển thị lỗi tải giao hàng: hết hàng, không đủ số lượng, không giao được, dùng cho trang `Giỏ hàng`, dùng chung cho 2 trường hợp `Giao tận nơi` và `Nhận tại siêu thị`
     |   |   |   ├── Loading.vue                     # Hiệu ứng loading, dùng cho tất cả các trang
-    |   |   |   ├── LocationSelection.vue           # Chứa các dropdown tỉnh thành, quận huyện, phường xã và button ẩn hiện dropdown, dùng cho tra `Giỏ hàng`
+    |   |   |   ├── LocationSelection.vue           # Chứa các dropdown tỉnh thành, quận huyện, phường xã và button ẩn hiện dropdown, dùng cho trang `Giỏ hàng`
+    |   |   |   ├── NormalPopup.vue                 # Một loại popup báo lỗi
+    |   |   |   ├── NormalPromotion.vue             # Thông tin khuyến mãi thường, dùng cho trang `Chi tiết` (popup) + trang `Giỏ hàng`
+    |   |   |   ├── OrderAlert.vue                  # Hiển thị trạng thái chung của đơn hàng như: Đặt hàng thành công, Thanh toán online thành công, Thanh toán online thất bại, Đơn hàng đang chờ xử lý => dùng cho trang `Thank you`
+    |   |   |   ├── ProductColorSelection.vue       # Chọn màu của sản phẩm, dùng cho trang `Giỏ hàng` => chưa làm: di chuyển component này tới riêng của trang `Giỏ hàng`, nó không phải component dùng chung
+    |   |   |   ├── ProductColorSelectionInPopup.vue # Chọn màu của sản phẩm, dùng cho trang `Chi tiết` (popup) => chưa làm: di chuyển component này tới riêng của trang `Chi tiết`, nó không phải component dùng chung
+    |   |   |   ├── QuantitySelector.vue            # Chọn số lượng sản phẩm, dùng cho trang `Chi tiết` (popup) + trang `Giỏ hàng`
+    |   |   |   ├── SexSelection.vue                # Chọn giới tính, gởi request lên server sau 1 khoảng thời gian, tương tự DelayedInput, dùng cho trang `Giỏ hàng` => chưa làm: di chuyển component này tới riêng của trang `Giỏ hàng`, nó không phải component dùng chung
+    |   |   |   ├── VnpayPromotionSuggestion.vue    # Gợi ý khuyến mãi VNPay, dùng cho trang `Chi tiết` (popup) + trang `Giỏ hàng`
     ├── .env.development                            # Chứa cấu hình cho môi trường development:
                                                         ## NODE_ENV => tên môi trường
                                                             NODE_ENV: Được sử dụng ở file vue.config.js (process.env.NODE_ENV)
