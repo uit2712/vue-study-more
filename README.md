@@ -55,7 +55,43 @@ npm update -g @vue/cli
     |   |   |   ├── ProductColorSelectionInPopup.vue # Chọn màu của sản phẩm, dùng cho trang `Chi tiết` (popup) => chưa làm: di chuyển component này tới riêng của trang `Chi tiết`, nó không phải component dùng chung
     |   |   |   ├── QuantitySelector.vue            # Chọn số lượng sản phẩm, dùng cho trang `Chi tiết` (popup) + trang `Giỏ hàng`
     |   |   |   ├── SexSelection.vue                # Chọn giới tính, gởi request lên server sau 1 khoảng thời gian, tương tự DelayedInput, dùng cho trang `Giỏ hàng` => chưa làm: di chuyển component này tới riêng của trang `Giỏ hàng`, nó không phải component dùng chung
-    |   |   |   ├── VnpayPromotionSuggestion.vue    # Gợi ý khuyến mãi VNPay, dùng cho trang `Chi tiết` (popup) + trang `Giỏ hàng`
+    |   |   |   └── VnpayPromotionSuggestion.vue    # Gợi ý khuyến mãi VNPay, dùng cho trang `Chi tiết` (popup) + trang `Giỏ hàng`
+    |   |   ├── constants                           # Chứa thông tin các hằng số
+    |   |   |   ├── index.js                        # Các hằng số dùng chung cho cả project
+    |   |   |   └── page-cart-constants.js          # Hằng số dùng cho trang `Giỏ hàng` => chưa làm: di chuyển tới thư mục ./src/constants/page-cart-constants.js mới đúng
+    |   |   ├── events                              # Các sự kiện dùng chung cho cả project
+    |   |   |   └── page-cart-events.js             # Sự kiện dùng cho trang `Giỏ hàng` => chưa làm: di chuyển tới thư mục ./src/events/page-cart-events.js mới đúng
+    |   |   ├── functions                           # Các hàm dùng chung
+    |   |   |   ├── index.js                        # Các hàm dùng chung cho cả project
+    |   |   |   ├── page-cart-functions.js          # Các hàm dùng cho trang `Giỏ hàng` => chưa làm: di chuyển tới thư mục ./src/functions/page-cart-functions.js mới đúng
+    |   |   |   ├── page-cart-result-functions.js   # Các hàm dùng cho trang `Thank you` => chưa làm: di chuyển tới thư mục ./src/functions/page-cart-result-functions.js mới đúng
+    |   |   |   └── page-product-detail-popup-functions.js  # Các hàm dùng cho trang `Chi tiết` (popup) => chưa làm: di chuyển tới thư mục ./src/functions/page-product-detail-popup-functions.js mới đúng
+    |   |   ├── google-analytics                    # Các hàm, hằng số liên quan google analytics
+    |   |   |   ├── eventAction.js                  # Tên các action như: click, detail, add,...
+    |   |   |   ├── eventCategory.js                # Tên category như: cart2020
+    |   |   |   ├── eventLabel.js                   # Tên các label như: viewCheckout, updateColorInCart,...
+    |   |   |   ├── index.js                        # Chứa các hàm hỗ trợ cho việc gởi dữ liệu lên google analytics
+    |   |   |   └── list.js                         # Tên list như: listInCart
+    |   |   ├── types                               # Các kiểu dữ liệu như: errorTypeId (loại popup báo lỗi)
+    |   |   |   ├── index.js                        # Các kiểu dữ liệu dùng chung cho cả project
+    |   |   |   ├── mock.js                         # Các kiểu dữ liệu dùng cho trang `Mock` => chưa làm: di chuyển tới thư mục ./src/types/mock.js mới đúng
+    |   |   |   ├── page-cart-result-types.js       # Các kiểu dữ liệu dùng cho trang `Thank you` => chưa làm: di chuyển tới thư mục ./src/types/page-cart-result-types.js mới đúng
+    |   |   |   ├── page-cart-types.js              # Các kiểu dữ liệu dùng cho trang `Giỏ hàng` => chưa làm: di chuyển tới thư mục ./src/types/page-cart-types.js mới đúng
+    |   |   |   └── page-product-detail-popup-types.js  # Các kiểu dữ liệu dùng cho trang `Chi tiết` (popup) => chưa làm: di chuyển tới thư mục ./src/types/page-product-detail-popup-types.js mới đúng
+    |   ├── components                              # Chứa thông tin các component dùng theo từng trang, đúng ra nên phân như sau:
+    |   |   ├── page-cart                           # Các component dùng trong trang `Giỏ hàng`
+    |   |   ├── page-cart-result                    # Các component dùng trong trang `Thank you`
+    |   |   └── page-product-detail-popup           # Các component dùng trong trang `Chi tiết` (popup)
+    |   ├── directives                              # Các directive
+    |   |   ├── index.js                            # Các directive dùng cho nhiều trang => chưa làm: di chuyển tới thư mục ./src/common/directives/index.js mới đúng
+    |   |   └── page-cart-directives.js             # Các directive dùng cho trang `Giỏ hàng`
+    |   ├── filters                                 # Các filter
+    |   |   └── index.js                            # Các filter dùng cho nhiều trang => chưa làm: di chuyển tới thư mục ./src/common/filters/index.js mới đúng
+    |   ├── mixins                                  # Các mixin
+    |   |   ├── index.js                            # Các mixin dùng cho nhiều trang => chưa làm: di chuyển tới thư mục ./src/common/mixins/index.js mới đúng
+    |   |   └── page-cart-mixin.js                  # Các mixin dùng cho trang `Giỏ hàng`
+    |   ├── pages                                   # Các trang hiện có, đúng ra chỉ có các trang sau
+    |   |
     ├── .env.development                            # Chứa cấu hình cho môi trường development:
                                                         ## NODE_ENV => tên môi trường
                                                             NODE_ENV: Được sử dụng ở file vue.config.js (process.env.NODE_ENV)
