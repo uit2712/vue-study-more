@@ -1,29 +1,29 @@
-# study-more
-
-## Install vue-cli
+# Cài đặt nodejs
+-Tải nodejs từ nguồn: [https://nodejs.org/en/download/](https://nodejs.org/en/download)\
+-Cài đặt nodejs
+# Cài đặt vue cli
+-Cài đặt vue cli bằng lệnh sau:
 ```
 npm install -g @vue/cli
 ```
-
-## Project setup
+-Cập nhật vue cli lên bản mới nhất:
 ```
-npm install
+npm update -g @vue/cli
 ```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+-Tài liệu thêm về vue cli: https://cli.vuejs.org/guide/
+# Cấu trúc thư mục
+    .
+    ├── public                          # Chứa những file có thể truy cập từ bên ngoài như css, hình ảnh
+    │   ├── css                   
+    |   |   ├──desktop                  # Chứa css của bản desktop
+    |   |   |   ├──cart.css             # Chứa css trang Giỏ hàng
+    |   |   |   ├──global.css           # Chứa css chung
+    |   |   |   ├──order-success.css    # Chứa css trang Đặt hàng thành công (thank you)
+    |   |   |   └──popup-detail.css     # Chứa css của popup trang chi tiết
+    |   |   ├──img                      # Chứa hình ảnh của dự án như các icon, theme tết,...
+    |   |   └──css                      # Chứa css của bản mobile
+    |   |   |   └──...
+    │   ├── icons                 # End-to-end, integration tests (alternatively `e2e`)
+    │   └── unit                # Unit tests
+    ├── src                     # Source files (alternatively `lib` or `app`)
+    
