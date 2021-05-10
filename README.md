@@ -26,6 +26,10 @@ npm update -g @vue/cli
     │   ├── icons                 # End-to-end, integration tests (alternatively `e2e`)
     │   └── unit                # Unit tests
     ├── src                     # Source files (alternatively `lib` or `app`)
+    |   ├── api                         # Chứa thông tin các hàm gọi api để lấy dữ liệu
+    |   |   ├── index.js                # Cấu hình request dùng chung sử dụng thư viện axios + sinh ra đường dẫn api thích hợp cho từng môi trường
+    |   |   ├── cart.js                 # Định nghĩa các hàm gọi api để lấy dữ liệu dựa vào biến dùng chung `request` trong file ./src/api/index.js => chưa làm: nên phân theo trang, ví dụ trong thư mục api chỉ nên có 4 file: index.js, page-cart-api.js (chứa các hàm gọi api cho trang `Giỏ hàng`), page-cart-result-api.js (chứa các hàm gọi api cho trang `Đặt hàng thành công` hay trang `Thank you`), page-popup-product-detail.js (chứa các hàm gọi api cho trang `Chi tiết sản phẩm` hay popup mua sản phẩm)
+    |   |   └──...
     ├── .env.development                # Chứa cấu hình cho môi trường development:
                                             ## NODE_ENV => tên môi trường
                                                 NODE_ENV: Được sử dụng ở file vue.config.js (process.env.NODE_ENV)
