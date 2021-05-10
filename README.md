@@ -47,7 +47,7 @@ npm update -g @vue/cli
     |   |   |   ├── HeightTransition.vue            # Hiệu ứng fade-in và fade-out (từ từ hiện ra và từ từ biến mất) dùng cho các dropdown
     |   |   |   ├── LatchOrderErrors.vue            # Hiển thị lỗi tải giao hàng: hết hàng, không đủ số lượng, không giao được, dùng cho trang `Giỏ hàng`, dùng chung cho 2 trường hợp `Giao tận nơi` và `Nhận tại siêu thị`
     |   |   |   ├── Loading.vue                     # Hiệu ứng loading, dùng cho tất cả các trang
-    |   |   |   ├── LocationSelection.vue           # Chứa các dropdown tỉnh thành, quận huyện, phường xã và button ẩn hiện dropdown
+    |   |   |   ├── LocationSelection.vue           # Chứa các dropdown tỉnh thành, quận huyện, phường xã và button ẩn hiện dropdown, dùng cho tra `Giỏ hàng`
     ├── .env.development                            # Chứa cấu hình cho môi trường development:
                                                         ## NODE_ENV => tên môi trường
                                                             NODE_ENV: Được sử dụng ở file vue.config.js (process.env.NODE_ENV)
