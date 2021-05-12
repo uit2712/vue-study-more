@@ -91,7 +91,15 @@ npm update -g @vue/cli
     |   |   ├── index.js                            # Các mixin dùng cho nhiều trang => chưa làm: di chuyển tới thư mục ./src/common/mixins/index.js mới đúng
     |   |   └── page-cart-mixin.js                  # Các mixin dùng cho trang `Giỏ hàng`
     |   ├── pages                                   # Các trang hiện có, đúng ra chỉ có các trang sau
-    |   |
+    |   |   ├── cart                                # Trang `Giỏ hàng` => chưa làm: đổi tên thành `page-cart`
+    |   |   |   ├── Cart.vue                        # Component đại diện cho trang `Giỏ hàng`
+    |   |   |   ├── CartError.vue                   # Component bắt lỗi chung của trang `Giỏ hàng`
+    |   |   ├── cart-result                         # Trang `Thank you` => chưa làm: đổi tên thành `page-cart-result`
+    |   |   |   ├── CartResult.vue                  # Component đại diện cho trang `Thank you`
+    |   |   |   ├── CartResultError.vue             # Component bắt lỗi chung của trang `Thank you`
+    |   |   ├── product-in-cate                     # Trang `Chi tiết` (popup) => chưa làm: đổi tên thành `page-product-detail-popup`
+    |   |   |   ├── ProductInCate.vue               # Component đại diện cho trang `Chi tiết` (popup)
+    |   |   |   ├── CartResultError.vue             # Component bắt lỗi chung của trang `Chi tiết` (popup)
     ├── .env.development                            # Chứa cấu hình cho môi trường development:
                                                         ## NODE_ENV => tên môi trường
                                                             NODE_ENV: Được sử dụng ở file vue.config.js (process.env.NODE_ENV)
