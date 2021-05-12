@@ -153,3 +153,14 @@ npm update -g @vue/cli
 - Tham khảo: https://www.npmjs.com/package/vue-content-loader
 - Bản mới nhất là bản vuex 4 kể từ thời điểm viết tài liệu
 ## Vue recaptcha: thư viện hiển thị recaptcha google, tránh spam
+# Các tài liệu liên quan khác
+## Mode và biến môi trường
+Link tài liệu: https://github.com/uit2712/vue-study-more/blob/master/docs/.env.README.md
+## Kỹ thuật Code splitting
+Link tài liệu: https://github.com/uit2712/vue-study-more/blob/master/docs/CodeSplitting.README.md
+## Hiệu ứng fade-in và fade-out của dropdown
+Link tài liệu: https://github.com/uit2712/vue-study-more/blob/master/docs/HeightTransition.vue.README.md
+## Plugin dùng cho global popup
+Link tài liệu: https://github.com/uit2712/vue-study-more/blob/master/docs/globalPopupPlugin.js.README.md
+## Vue config
+Link tài liệu: https://github.com/uit2712/vue-study-more/blob/master/docs/vue.config.js.README.md
