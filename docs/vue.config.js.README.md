@@ -95,6 +95,7 @@ module.exports = {
 ```
 ## Minify
 - Ở đây chúng ta dùng webpack để tối giản các file css, javascript được sinh ra trong quá trình build như lược bỏ các ký tự khoảng trắng, rút gọn tên/biến,... (quá trình này gọi là minify), thông thường chúng ta dùng minify ở môi trường production => lợi ích: giảm tối đa dung lượng file, tăng tốc độ tải ban đầu của website
+- Mặc định quá trình minify chỉ thực thi ở môi trường production thôi
 ```javascript
 module.exports = {
     configureWebpack: {
