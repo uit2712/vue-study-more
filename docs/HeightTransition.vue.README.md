@@ -12,7 +12,7 @@ export default {
   }
 }
 ```
-- Sử dụng trong template của component:
+- Sử dụng trong template của component:\
 Lưu ý: element hay component muốn thêm hiệu ứng _fade-in_ hay _fade-out_ phải sử dụng **v-show** hay **v-if**
 ```html
 <HeightTransition>
