@@ -164,7 +164,8 @@ npm update -g @vue/cli
 - Thư viện quản lý trạng thái toàn cục cho project
 - Tham khảo: https://www.npmjs.com/package/vue-content-loader
 - Bản mới nhất là bản vuex 4 kể từ thời điểm viết tài liệu
-## Vue recaptcha: thư viện hiển thị recaptcha google, tránh spam
+## Vue recaptcha
+- Thư viện hiển thị recaptcha google, tránh spam
 # Các tài liệu liên quan khác
 ## Mode và biến môi trường
 Link tài liệu: https://github.com/uit2712/vue-study-more/blob/master/docs/.env.README.md
