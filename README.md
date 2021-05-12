@@ -12,8 +12,8 @@ npm update -g @vue/cli
 ```
 -Tài liệu thêm về vue cli: https://cli.vuejs.org/guide/
 # Cài đặt vscode
--Tải vscode từ nguồn: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
--Cài đặt extension: __Vetur__, __Vue 2 Snippets__, __Vue 3 Snippets__, __Vue VSCode Snippets__, __Tabnine__ (tùy chọn)
+-Tải vscode từ nguồn: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)\
+-Cài đặt extension: __Vetur__, __Vue 2 Snippets__, __Vue 3 Snippets__, __Vue VSCode Snippets__, __Tabnine__ (tùy chọn)\
 -Sử dụng các snippet phổ biến: vbase => sinh ra template cho 1 component
 # Cấu trúc thư mục
     .
