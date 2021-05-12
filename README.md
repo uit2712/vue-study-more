@@ -25,9 +25,7 @@ npm update -g @vue/cli
     |   |   ├──img                                  # Chứa hình ảnh của dự án như các icon, theme tết,...
     |   |   └──css                                  # Chứa css của bản mobile
     |   |   |   └──...
-    │   ├── icons                 # End-to-end, integration tests (alternatively `e2e`)
-    │   └── unit                # Unit tests
-    ├── src                     # Source files (alternatively `lib` or `app`)
+    ├── src                                         # Source files (alternatively `lib` or `app`)
     |   ├── api                                     # Chứa thông tin các hàm gọi api để lấy dữ liệu
     |   |   ├── index.js                            # Cấu hình request dùng chung sử dụng thư viện axios + sinh ra đường dẫn api thích hợp cho từng môi trường
     |   |   ├── cart.js                             # Định nghĩa các hàm gọi api để lấy dữ liệu dựa vào biến dùng chung `request` trong file ./src/api/index.js => chưa làm được: nên phân theo trang, ví dụ trong thư mục api chỉ nên có 4 file: index.js, page-cart-api.js (chứa các hàm gọi api cho trang `Giỏ hàng`), page-cart-result-api.js (chứa các hàm gọi api cho trang `Đặt hàng thành công` hay trang `Thank you`), page-popup-product-detail.js (chứa các hàm gọi api cho trang `Chi tiết sản phẩm` hay popup mua sản phẩm)
@@ -116,6 +114,8 @@ npm update -g @vue/cli
     |   |   ├── googleTagManager.js                 # Các hàm gởi thông tin tới google tag manager => đổi tên thành: google-tag-manager.js
     |   |   ├── index.js                            # Gọi các hàm gởi thông tin tới `ga` hay `gtm`, hỗ trợ chuyển đổi 1 cách dễ dàng, nếu muốn tracking bằng `ga` hoặc `gtm`, đổi hàm 1 phát là xong
     |   |   ├── trackingEvent.js                    # Tên các event tracking => đổi tên: tracking-events.js
+    |   ├── validation
+    |   |   ├── index.js                            # Chứa các rule để xác thực form
     ├── .env.development                            # Chứa cấu hình cho môi trường development:
                                                         ## NODE_ENV => tên môi trường
                                                             NODE_ENV: Được sử dụng ở file vue.config.js (process.env.NODE_ENV)
