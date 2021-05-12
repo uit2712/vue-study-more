@@ -137,8 +137,19 @@ npm update -g @vue/cli
                                                                 npm run build-local     => Sinh ra các file js ở môi trường local và development => dùng ở nhánh beta (nhánh này để xem trước tất cả các kịch bản, tính năng mới sắp sửa release, đang test) + dùng ở nhánh dev (nhánh này sẽ gom tất cả các tính năng sắp sửa release đã qua giai đoạn test)
     └── vue.config.js                               # Cấu hình để build ra các file js, css, hình ảnh dùng lệnh npm run build-xx cho các môi trường + bao gồm cả bundle và minify
 # Những thứ khác cần biết
-## Axios: thư viện gọi api
-## Vee validate: thư viện dùng cho validate các form
-## Vue content loader: thư viện hiển thị hiệu ứng loading cho 1 component đang xử lý
-## Vuex: thư viện quản lý trạng thái toàn cục cho project
+## Axios
+- Thư viện gọi api
+- Tham khảo: https://github.com/axios/axios
+## Vee validate 3
+- Thư viện dùng cho validate các form
+- Tham khảo: https://vee-validate.logaretm.com/v3/guide/basics.html#validation-provider
+- Bản mới nhất là bản vee validate 4 kể từ thời điểm viết tài liệu
+## Vue content loader
+- Thư viện hiển thị hiệu ứng loading cho 1 component đang xử lý
+- Tham khảo: https://www.npmjs.com/package/vue-content-loader
+- Skeleton: https://skeletonreact.com/
+## Vuex 3
+- Thư viện quản lý trạng thái toàn cục cho project
+- Tham khảo: https://www.npmjs.com/package/vue-content-loader
+- Bản mới nhất là bản vuex 4 kể từ thời điểm viết tài liệu
 ## Vue recaptcha: thư viện hiển thị recaptcha google, tránh spam
