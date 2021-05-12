@@ -100,6 +100,22 @@ npm update -g @vue/cli
     |   |   ├── product-in-cate                     # Trang `Chi tiết` (popup) => chưa làm: đổi tên thành `page-product-detail-popup`
     |   |   |   ├── ProductInCate.vue               # Component đại diện cho trang `Chi tiết` (popup)
     |   |   |   ├── CartResultError.vue             # Component bắt lỗi chung của trang `Chi tiết` (popup)
+    |   ├── plugins                                 # Plugin cho từng trang
+    |   |   ├── cartPlugin.js                       # Plugin dùng cho trang `Giỏ hàng` => đổi tên thành `page-cart-plugin.js`
+    |   |   ├── cartResultPlugin.js                 # Plugin dùng cho trang `Thank you` => đổi tên thành `page-cart-result-plugin.js`
+    |   |   ├── globalPlugin.js                     # Plugin dùng cho tất cả các trang => chưa làm: nên chuyển đến ./src/common/plugins/index.js
+    |   |   ├── globalPopupPlugin.js                # Plugin dùng cho popup báo lỗi => chưa làm: nên chuyển đến ./src/common/plugins/globalPopupPlugin.js
+    |   |   ├── productInCatePlugin.js              # Plugin dùng cho trang `Chi tiết` (popup) => đổi tên thành `page-product-detail-popup-plugin.js`
+    |   ├── store                                   # Chứa những thứ liên quan vuex như store, module
+    |   |   ├── module-types                        # Các file chứa hằng số là tên của module, tên của action, tên của mutation, tên của getter
+    |   |   ├── modules                             # Các module của store, phân tách theo từng trang
+    |   |   ├── page-cart-result-store.js           # Định nghĩa store cho trang `Thank you`
+    |   |   ├── page-cart-store.js                  # Định nghĩa store cho trang `Giỏ hàng`
+    |   |   ├── page-product-detail-popup-store.js  # Định nghĩa store cho trang `Chi tiết` (popup)
+    |   ├── tracking                                # Chứa các file liên quan tracking google analytics (ga) hay google tag manager (gtm)
+    |   |   ├── googleTagManager.js                 # Các hàm gởi thông tin tới google tag manager => đổi tên thành: google-tag-manager.js
+    |   |   ├── index.js                            # Gọi các hàm gởi thông tin tới `ga` hay `gtm`, hỗ trợ chuyển đổi 1 cách dễ dàng, nếu muốn tracking bằng `ga` hoặc `gtm`, đổi hàm 1 phát là xong
+    |   |   ├── trackingEvent.js                    # Tên các event tracking => đổi tên: tracking-events.js
     ├── .env.development                            # Chứa cấu hình cho môi trường development:
                                                         ## NODE_ENV => tên môi trường
                                                             NODE_ENV: Được sử dụng ở file vue.config.js (process.env.NODE_ENV)
