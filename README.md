@@ -9,6 +9,12 @@ Table of contents
   * [Vue content loader](#vue-content-loader)
   * [Vuex 3](#vuex-3)
   * [Vue recaptcha](#vue-recaptcha)
+- [Các tài liệu liên quan khác](#các-tài-liệu-liên-quan-khác)
+  * [Mode và biến môi trường](#mode-và-biến-môi-trường)
+  * [Kỹ thuật Code splitting](#kỹ-thuật-code-splitting)
+  * [Hiệu ứng fade-in và fade-out của dropdown](#hiệu-ứng-fade-in-và-fade-out-của-dropdown)
+  * [Plugin dùng cho global popup](#plugin-dùng-cho-global-popup)
+  * [Vue config](#vue-config)
 
 # Cài đặt nodejs
 -Tải nodejs từ nguồn: [https://nodejs.org/en/download/](https://nodejs.org/en/download)\
