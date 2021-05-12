@@ -32,3 +32,24 @@ function getPublicPath() {
 }
 ```
 Với **env** là tên của môi trường được lấy từ các file dạng **.env.**
+## Output directory/folder
+- Đây là thư mục sinh ra các file do chạy câu lệnh sau mà ra
+```
+vue-cli-service build ...
+```
+- Trong project này, các file này được sinh ra trong thư mục **wwwroot** của **.net core**
+```javascript
+const env = process.env.NODE_ENV;
+
+function getOutputDir() {
+    switch(env) {
+        case 'local': return '../../wwwroot/vue-local';
+        case 'development': return '../../wwwroot/vue-dev';
+        case 'staging': return '../../wwwroot/vue-stg';
+        case 'production': return '../../wwwroot/vue-pro';
+        case 'mock': return '../../wwwroot/vue-mock';
+        default: return '';
+    }
+}
+```
+Với **env** là tên của môi trường được lấy từ các file dạng **.env.**
