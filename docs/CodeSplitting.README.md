@@ -7,7 +7,7 @@
 ```javascript
 const LoginModal = () => import(
   /* webpackPrefetch: true */
-  /* webpackChunkName: 'login-modal'
+  /* webpackChunkName: 'login-modal' */
   './path/to/LoginModal.js');
   
 ...
