@@ -168,7 +168,7 @@ npm update -g @vue/cli
 - Skeleton: https://skeletonreact.com/
 ## Vuex 3
 - Thư viện quản lý trạng thái toàn cục cho project
-- Tham khảo: https://www.npmjs.com/package/vue-content-loader
+- Tham khảo: https://vuex.vuejs.org
 - Bản mới nhất là bản vuex 4 kể từ thời điểm viết tài liệu
 ## Vue recaptcha
 - Thư viện hiển thị recaptcha google, tránh spam
